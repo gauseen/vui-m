@@ -102,6 +102,7 @@ this.$toast(options);
 | auto | 自动播放的时间间隔（毫秒）, 为 0 时关闭自动轮播 | Number | | 3000 |
 | startSlide | 初始显示的轮播图的索引 | Number | | 0 |
 | continuous | 是否可以循环播放 | Boolean | | true |
+| isShowIndicators | 是否显示indicators | Boolean | | true |
 | stopPropagation | 是否在  touchstart 事件触发时阻止冒泡。 | Boolean | | true |
 
 ### Slot
