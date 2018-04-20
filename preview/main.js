@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Test from 'src/components/test'
 import Vuim from 'src/index.js'
 
 import App from './App'

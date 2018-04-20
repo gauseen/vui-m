@@ -32,10 +32,8 @@
 </template>
 
 <script>
-
 export default {
 	name: 'actionSheet',
-
 	data () {
 		return {
 			isShowSheet: false,

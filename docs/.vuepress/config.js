@@ -2,10 +2,10 @@ module.exports = {
 	dest: '.vuepress/vui-docs',
 	base: '/docs/',
 	title: 'vui-m',
-	description: '基于 vuejs 2.x UI 框架',
+	description: '基于 vuejs 2.x UI 框架，移动端 （for mobile）',
 	head: [
 		['link', { rel: 'shortcut icon', href: `/favicon.ico` }],
-	],
+	],	
 	host: 'localhost',
 	serviceWorker: true,
 	themeConfig: {

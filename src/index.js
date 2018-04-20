@@ -43,8 +43,19 @@ if (typeof window !== 'undefined' && window.Vue) {
 	window.Vue.use(install)
 }
 
-export const cpts = {
-	...components,
+// 按需引入
+export {
+	// js components
+	Test,
+	Toast,
+	Swipe,
+	SwipeItem,
+	Popup,
+	ActionSheet,
+	InfiniteScroll,
+	Masker,
+	// css components
+	Button,
 }
 
 export default install

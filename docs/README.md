@@ -20,7 +20,7 @@ footer: MIT Licensed | Copyright © 2018-present gauseen
 #### [在线演示](https://gauseen.github.io/vui-m/#/home)
 
 >#### 可用组件
-```javascript
+```js
 Toast
 Swipe
   Swipe-item
