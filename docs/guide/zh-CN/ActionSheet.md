@@ -1,6 +1,6 @@
-### Action sheet
+### Action sheet 行动操作
 
-> 操作表，从屏幕下方移入。
+> 行动操作，从屏幕下方移入。
 
 ----------
 
@@ -27,4 +27,4 @@
 | v-model | 绑定一个变量，通过此变量控制 action-sheet 显示或隐藏 | Boolean | | true |
 | actions | 菜单项数组 | Array | | |
 | cancelText | 取消按钮的文本。若设为空字符串，则不显示取消按钮 | String | | '取消' |
-| closeOnClicelMask | 是否可以通过点击 mask 层来关闭 `actionsheet` | Boolean | | true |
+| closeOnClickMask | 是否可以通过点击 mask 层来关闭 `actionsheet` | Boolean | | true |

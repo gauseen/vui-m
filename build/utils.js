@@ -57,6 +57,7 @@ exports.cssLoaders = function (options) {
   var stylusOptions = {
     import: [
       path.join(__dirname, "../src/styles/vars.styl"), // 一次性引入全局样式
+      path.join(__dirname, "../src/styles/mixins.styl"), // 一次性引入 stylus mixins
     ],
     paths: [
       path.join(__dirname, "../src/styles/"),

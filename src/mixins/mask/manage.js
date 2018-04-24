@@ -10,6 +10,7 @@ export default {
 		const instance = this.getInstance()
 		const el = vm.$el
 		fakeVm = vm
+
 		const targetNode = el && el.parentNode && el.parentNode.nodeType !== 11 ? el.parentNode : document.body
 		instance.visible = true
 		Vue.nextTick(() => {
@@ -24,6 +25,7 @@ export default {
 	getInstance () {
 		maskerInstance = new VueExtendMask().$mount(document.createElement('div'))
 		maskerInstance.$on('click', this.onClick.bind(maskerInstance))
+		// console.log('mask:===', maskerInstance)
 		return maskerInstance
 	},
 

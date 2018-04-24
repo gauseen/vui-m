@@ -7,6 +7,7 @@ module.exports = {
 		['link', { rel: 'shortcut icon', href: `/favicon.ico` }],
 	],	
 	host: 'localhost',
+	port: 8088,
 	serviceWorker: true,
 	themeConfig: {
 		nav: [
@@ -16,11 +17,12 @@ module.exports = {
 		],
 		sidebar: [
 			['/guide/zh-CN/GettingStarted', '快速上手'],
-			['/guide/zh-CN/Toast', 'Toast'],
-			['/guide/zh-CN/Masker', 'Masker'],
-			['/guide/zh-CN/Swipe', 'Swipe'],
-			['/guide/zh-CN/ActionSheet', 'ActionSheet'],
-			['/guide/zh-CN/InfiniteScroll', 'InfiniteScroll'],
+			['/guide/zh-CN/Toast', '轻提示 Toast'],
+			['/guide/zh-CN/Dialog', '弹框 Dialog'],
+			['/guide/zh-CN/Masker', '遮罩层 Masker'],
+			['/guide/zh-CN/Swipe', '轮播图 Swipe'],
+			['/guide/zh-CN/ActionSheet', '行动操作 ActionSheet'],
+			['/guide/zh-CN/InfiniteScroll', '上滑无限加载 InfiniteScroll'],
 		]
 	}
 }

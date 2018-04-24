@@ -7,6 +7,7 @@ import Popup from './components/popup'
 import ActionSheet from './components/action-sheet'
 import InfiniteScroll from './components/infinite-scroll'
 import Masker from './components/masker'
+import Dialog from './components/dialog'
 
 // css components
 import Button from './components/button'
@@ -36,6 +37,7 @@ const install = function (Vue, opt = {}) {
 	})
 
 	Vue.$toast = Vue.prototype.$toast = Toast
+	Vue.$dialog = Vue.prototype.$dialog = Dialog
 }
 
 // auto install
@@ -54,6 +56,7 @@ export {
 	ActionSheet,
 	InfiniteScroll,
 	Masker,
+	Dialog,
 	// css components
 	Button,
 }
