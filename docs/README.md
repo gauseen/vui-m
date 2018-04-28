@@ -27,5 +27,6 @@ Swipe
 ActionSheet
 InfiniteScroll
 Masker
+Dialog
 ```
 多谢支持，持续更新中...

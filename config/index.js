@@ -37,13 +37,52 @@ module.exports = {
     cssSourceMap: true
   },
 
-  build: {
+  buildPublic: {
+    assetsSubDirectory: 'dist',
+    assetsPublicPath: '/',
+    entryPath: path.resolve(__dirname, '../src/index.js'),
+    productionSourceMap: false,
+  },
+
+  buildPreview: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../distPreview/index.html'),
 
     // Paths
     entryPath: path.resolve(__dirname, '../src/index.js'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../distPreview'),
+    assetsSubDirectory: 'dist',
+    assetsPublicPath: '/',
+
+    /**
+     * Source Maps
+     */
+
+    productionSourceMap: false,
+    // https://webpack.js.org/configuration/devtool/#production
+    devtool: '#source-map',
+
+    // Gzip off by default as many popular static hosts such as
+    // Surge or Netlify already gzip all static assets for you.
+    // Before setting to `true`, make sure to:
+    // npm install --save-dev compression-webpack-plugin
+    productionGzip: false,
+    productionGzipExtensions: ['js', 'css'],
+
+    // Run the build command with an extra argument to
+    // View the bundle analyzer report after build finishes:
+    // `npm run build --report`
+    // Set to `true` or `false` to always turn it on or off
+    bundleAnalyzerReport: process.env.npm_config_report
+  },
+
+  buildNpm: {
+    // Template for index.html
+    index: path.resolve(__dirname, '../distNpm/index.html'),
+
+    // Paths
+    entryPath: path.resolve(__dirname, '../src/index.js'),
+    assetsRoot: path.resolve(__dirname, '../distNpm'),
     assetsSubDirectory: 'dist',
     assetsPublicPath: '/',
 

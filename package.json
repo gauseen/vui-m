@@ -15,8 +15,7 @@
     "build:npm": "node build/build.npm.pkg.js",
     "build:preview": "node build/build.preview.js",
     "build:docs": "vuepress build docs",
-    "deploy": "npm run build:preview && npm run gh:pages",
-    "gh:preview": "gh-pages -d dist",
+    "gh:preview": "gh-pages -d distPreview",
     "gh:docs": "gh-pages -d .vuepress/vui-docs -r git@github.com:vui-m/docs.git"
   },
   "dependencies": {

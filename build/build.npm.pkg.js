@@ -15,7 +15,7 @@ const webpackConfig = require('./webpack.prod.conf')
 const spinner = ora('building for production...')
 spinner.start()
 
-rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
+rm(path.join(config.buildNpm.assetsRoot, config.buildNpm.assetsSubDirectory), err => {
   if (err) throw err
   webpack(webpackConfig, (err, stats) => {
     spinner.stop()
@@ -33,7 +33,7 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
       process.exit(1)
     }
 
-    shell.cp('-R', './npmPublish/*', config.build.assetsRoot)
+    shell.cp('-R', './npmPublish/*', config.buildNpm.assetsRoot)
 
     console.log(chalk.cyan('  Build complete.\n'))
     console.log(chalk.yellow(

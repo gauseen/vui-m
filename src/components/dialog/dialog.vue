@@ -79,8 +79,6 @@ export default {
 	background-color: #fff
 	transform: translate3d(-50%, -50%, 0)
 .dialog__title
-	// 超出 ...
-	overflow-ellipsis(1)
 	text-align: center
 	padding-top: 10px
 	overflow: hidden
