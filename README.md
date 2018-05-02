@@ -17,37 +17,47 @@ Masker
 
 >#### 目录结构
 ```
-|———build       // webpack 配置项
+|———build       # webpack 配置项
 |
 |
-|———config      // 配置项
+|———config      # 配置项
 |
 |
-|———dist        // vue ui 组件库产出目录
+|———distNpm     # vue ui 组件库产出 ———> npm run build:preview，用于发布 npm 包
 |
 |
-|———preview     // 组件（预览）测试目录
+|———distPreview # 预览项目产出 ———> npm run build:preview
 |
 |
-|          |————index.js    // vui-m 库入口文件
-|          |
-|          |————components  // vui-m 组件开发目录
-|          |
-|———src————|————mixins     // mixins
-|          |
-|          |————styles     // 公共样式及单页面抽离出的样式
-|          |
-|          |————utils      // 公用方法
+|
+|———.vuepress——| vui-docs   # 文档产出目录 ———> npm run build:docs
 |
 |
-|———npmPublish  // 发布 npm 包 所需文件
+|
+|———preview     # 组件（预览）测试目录
 |
 |
-|———static      // 静态文件
+|———docs        # UI 库文档编写目录
 |
 |
-|———test        // 单元测试
+|                 |————index.js    # vue ui 库入口文件
+|                 |
+|                 |————components  # vue ui 组件开发目录
+|                 |
+|———src(组件开发)——|————mixins      # mixins
+|                 |
+|                 |————styles      # 公共样式及单页面抽离出的样式
+|                 |
+|                 |————utils       # 公用方法
+|
+|
+|———npmPublish  # 发布 npm 包 所需文件 
+|
+|
+|———static      # 静态文件
+
 ```
+
 >#### 安装依赖
 ```bash
 npm i vui-m -S

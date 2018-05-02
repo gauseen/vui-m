@@ -1,9 +1,12 @@
 'use strict'
 const utils = require('./utils')
 const config = require('../config')
-const isProduction = process.env.NODE_ENV === 'production'
+const _nodeEnv = process.env.NODE_ENV
+
+// 是否为生产环境（prodPreview || prodNpm）
+const isProduction = _nodeEnv === 'prodPreview' || _nodeEnv === 'prodNpm'
 const sourceMapEnabled = isProduction
-  ? config.buildPublic.productionSourceMap
+  ? utils.getEnvConfig('productionSourceMap')
   : config.dev.cssSourceMap
 
 module.exports = {

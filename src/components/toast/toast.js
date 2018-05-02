@@ -30,6 +30,7 @@ const ToastFn = (options = {}) => {
 	document.body.appendChild(instance.$el)
 	Vue.nextTick(() => {
 		instance.visible = true
+		instance.$el.removeEventListener('transitionend', removeDom)
 		instance.position = options.position || 'middle'
 		instance.timer = setTimeout(() => {
 			instance.close(instance)

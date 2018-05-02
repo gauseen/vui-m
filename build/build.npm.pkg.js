@@ -1,7 +1,7 @@
 'use strict'
 require('./check-versions')()
 
-process.env.NODE_ENV = 'production'
+process.env.NODE_ENV = 'prodNpm'
 
 const ora = require('ora')
 const rm = require('rimraf')
@@ -10,9 +10,9 @@ const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
 const shell = require('shelljs')
-const webpackConfig = require('./webpack.prod.conf')
+const webpackConfig = require('./webpack.prod.npm.conf')
 
-const spinner = ora('building for production...')
+const spinner = ora('building for production npm pkg ...')
 spinner.start()
 
 rm(path.join(config.buildNpm.assetsRoot, config.buildNpm.assetsSubDirectory), err => {

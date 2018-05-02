@@ -11,14 +11,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-const env = process.env.NODE_ENV === 'testing'
-  ? require('../config/test.env')
-  : require('../config/prod.env')
+const env = require('../config/prodPreview.env')
 
 const webpackConfig = merge(baseWebpackConfig, {
-  entry: {
-    'vui-m': path.resolve(__dirname, '../preview/main.js'),
-  },
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.buildPreview.productionSourceMap,
@@ -29,7 +24,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.buildPreview.productionSourceMap ? config.buildPreview.devtool : false,
   output: {
     path: config.buildPreview.assetsRoot,
-    publicPath: '/vui-m/',
+    publicPath: config.buildPreview.assetsPublicPath,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
@@ -67,9 +62,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: process.env.NODE_ENV === 'testing'
-        ? 'index.html'
-        : config.buildPreview.index,
+      filename: config.buildPreview.index,
       template: 'index.html',
       inject: true,
       favicon: './favicon.ico',
